@@ -33,7 +33,7 @@ Should be detailed and specific; differentiate between MVP features and secondar
 7. Henrietta wants users to be able to add a category to an article so that articles can be organized.<br>
 
 #### User Stories:
-Henrietta the business magnate is a world-renowned astrologer following in the footsteps of her mentor, Joan Quigley. As such, a user of this particular wiki will enter using a landing page and approved log-in credentials and then access individual articles about natal charts, including the 12 zodiac signs, their ruling planets, and the houses in which they fall.
+Henrietta is a restauranteur whose franchsie is growing rapidly. She wants her employees to be able to learn from her top-secret recipes, as well as share their own, no matter where they're located. So users need to be able to log in with password authenication and then create new articles. Each article will display which user created it, and when it was last edited, by whom. 
 
 ###Front-end Wireframes (3 Points)
 Should be legible and labeled informatively. These should illustrate the different possible flows of a user through your application's pages.<br>
