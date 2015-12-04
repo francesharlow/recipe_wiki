@@ -1,0 +1,28 @@
+<% if @user %>
+<h1> Welcome, <%= @user.name %>.</h1>
+<p>What's cookin'?</p>
+
+<h2><a href="/users">Chefs</a></h2>
+<h2><a href="/articles">Recipes</a></h2>
+
+<form action="/sessions" method="POST">
+  <input type="hidden" name="_method" value="delete">
+  <button>Log out</button>
+</form>
+
+<% else %>
+
+<h1>Welcome to Henrietta's Secret Sauce.</h1>
+<h2>You must <b>log in<b> to enter.</h2>
+
+<form action="/sessions" method="POST">
+  <label for="username">Username:</label>
+  <input type="text" name="username" id="username">
+  <label for="password">Password:</label>
+  <input type="password" name="password" id="password">
+  <button>Log in</button>
+</form>
+
+<p>Not yet a member? <a href="/users/new">Sign up</a></p>
+
+<% end %>
