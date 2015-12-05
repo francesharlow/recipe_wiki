@@ -1,5 +1,6 @@
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS articles;
+DROP TABLE IF EXISTS edits;
 DROP TABLE IF EXISTS categories;
 
 CREATE TABLE users (
@@ -16,10 +17,14 @@ CREATE TABLE articles (
   ingredients TEXT,
   directions TEXT,
   img_url TEXT,
-  created_at DATETIME,
+  created_on DATETIME,
   author_id INTEGER
-  -- latest_edited_at DATETIME,
-  -- latest_editor_id INTEGER REFERENCES users(id)
+);
+
+CREATE TABLE edits (
+  article_id INTEGER,
+  editor_id INTEGER,
+  edited_at DATETIME
 );
 
 -- CREATE TABLE categories (

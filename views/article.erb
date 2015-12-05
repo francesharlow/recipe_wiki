@@ -1,6 +1,11 @@
 <h1><%= @article.title %></h1>
 <img src="<%= @article.img_url %>">
-<h2>Created by <%= @article.author.username %> on <%= @article.created_at %></h2>
+<h2>Created by <%= @article.author.username %> on <%= @article.created_on %></h2>
+<% if @edit %>
+<h2>Last edited by <%= @edit.editor.username %> at <%= @edit.edited_at %><h2>
+<% else %>
+<h2>This article has not been edited yet.</h2>
+<% end %>
 <h3>Ingredients:</h3>
   <ul>
     <li><%= @article.ingredients %></li>

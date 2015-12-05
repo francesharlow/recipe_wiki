@@ -62,7 +62,7 @@ module App
         ingredients: params[:ingredients], 
         directions: params[:directions], 
         img_url: params[:img_url],
-        created_at: DateTime.now,
+        created_on: DateTime.now,
         author_id: session[:user_id]
         )
       redirect to "/articles"
@@ -77,8 +77,39 @@ module App
     get "/articles/:id" do
       redirect to "/" if !session[:user_id]
       @article = Article.find(params[:id])
+      # code below from http://stackoverflow.com/questions/9780169/active-record-model-find-last
+      @edit = Edit.where(article_id: params[:id]).order(:edited_at).last
       erb :article
     end
+
+    get "/articles/:id/edit" do
+      redirect to "/" if !session[:user_id]
+      @article = Article.find_by(params[:id])
+      erb :edit_article
+    end
+
+    patch "/articles/:id" do
+      article = Article.find(params[:id])
+      article.update(
+        title: params[:title], 
+        ingredients: params[:ingredients],
+        directions: params[:directions],
+        img_url: params[:img_url]
+        )
+      Edit.create(
+        article_id: params[:id],
+        editor_id: session[:user_id],
+        edited_at: DateTime.now
+        )
+      redirect to "/articles/#{article.id}"
+    end
+
+    delete "/articles/:id" do 
+      article = Article.find(params[:id])
+      article.destroy
+      redirect to "/articles"
+    end
+
 
   end
 end
