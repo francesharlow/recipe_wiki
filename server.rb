@@ -52,6 +52,7 @@ module App
     end
 
     get "/articles/new" do
+      redirect to "/" if !session[:user_id]
       erb :new_article
     end
 
@@ -62,9 +63,9 @@ module App
         directions: params[:directions], 
         img_url: params[:img_url],
         created_at: DateTime.now,
-        author_id: session[:id]
+        author_id: session[:user_id]
         )
-      redirect to "/article/#{params[:id]}"
+      redirect to "/articles"
     end
 
     get "/articles" do
