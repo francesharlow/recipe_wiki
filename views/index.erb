@@ -1,38 +1,50 @@
 <% if @user %>
-<h1> Welcome, <%= @user.username %>.</h1>
-<p>What's cookin' in <%= @user.location %>?</p>
-
-<h2><a href="/users">Chefs</a></h2>
-<h2><a href="/articles">Recipes</a></h2>
-<h2><a href="/categories">Tags</a></h2>
-
-<h3>Your contributions</h3>
-  <ul>
-  <!-- insert link list of recipes authored by @user -->
-  </ul>
-<h3>Recent updates</h3>
-  <ul>
-  <!-- insert link list of recently edited articles -->
-  </ul>
-
-<form action="/sessions" method="POST">
-  <input type="hidden" name="_method" value="delete">
-  <button>Log out</button>
-</form>
-
+  <div class="home">
+    <div class="greeting">
+      <h1> Hey, <%= @user.username %>.</h1>
+      <p><i>What's cookin' in <%= @user.location %>?</i></p>
+    </div>
+    <div class="profile">
+      <img class="avatar" src="<%= @user.avatar_img_url %>">
+      <div class="contributions">
+      <h3>Your contributions</h3>
+        <ul>
+        <!-- insert link list of recipes authored by @user -->
+        </ul>
+      </div>
+      <div class="edits">
+        <h3>Recent updates</h3>
+        <ul>
+        <!-- insert link list of recently edited articles -->
+        </ul>
+      </div>
+    </div>
+    <ul>
+      <li><a href="/users">Chefs</a></li>
+      <li><a href="/articles">Recipes</a></li>
+      <li><a href="/categories">Tags</a></li>
+      <form action="/sessions" method="POST">
+        <input type="hidden" name="_method" value="delete">
+        <button>Log out</button>
+      </form>
+    </ul>
+  </div>
 <% else %>
-
-<h1>Welcome to Henrietta's Secret Sauce.</h1>
-<h2>You must <b>log in</b> to enter.</h2>
-
-<form action="/sessions" method="POST">
-  <label for="username">Username:</label>
-  <input type="text" name="username" id="username">
-  <label for="password">Password:</label>
-  <input type="password" name="password" id="password">
-  <button>Log in</button>
-</form>
-
-<p>Not yet a member? <a href="/users/new">Sign up</a></p>
-
+<div class="splash">
+  <div class="cover">
+    <img src="http://static01.nyt.com/images/2014/09/10/multimedia/clark-sweet-sour-chicken/clark-sweet-sour-chicken-superJumbo.jpg">
+    </div>
+  <div class="login">
+    <h1>Welcome to Henrietta's Secret Sauce.</h1>
+    <h2>You must log in to enter.</h2>
+    <p><i>Not yet a member? <a href="/users/new">Sign up</a></i></p>
+    <form action="/sessions" method="POST">
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username">
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password">
+      <button>Log in</button>
+    </form>
+  </div>
+</div>
 <% end %>
