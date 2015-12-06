@@ -88,7 +88,7 @@ module App
     get "/articles/:id/edit" do
       redirect to "/" if !session[:user_id]
       # @article = Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(Article.find_by(params[:id])).html_safe
-      @article = Article.find_by(params[:id])
+      @article = Article.find(params[:id])
       erb :edit_article
     end
 
@@ -113,6 +113,19 @@ module App
       article = Article.find(params[:id])
       article.destroy
       redirect to "/articles"
+    end
+
+    get "/categories" do
+      redirect to "/" if !session[:user_id]
+      @categories = Category.all
+      erb :categories
+    end
+
+    get "/categories/:id" do
+     redirect to "/" if !session[:user_id]
+     @category = Category.where(id: params[:id])
+ 
+     erb :category
     end
 
   end

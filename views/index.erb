@@ -1,9 +1,19 @@
 <% if @user %>
 <h1> Welcome, <%= @user.username %>.</h1>
-<p>What's cookin'?</p>
+<p>What's cookin' in <%= @user.location %>?</p>
 
 <h2><a href="/users">Chefs</a></h2>
 <h2><a href="/articles">Recipes</a></h2>
+<h2><a href="/categories">Tags</a></h2>
+
+<h3>Your contributions</h3>
+  <ul>
+  <!-- insert link list of recipes authored by @user -->
+  </ul>
+<h3>Recent updates</h3>
+  <ul>
+  <!-- insert link list of recently edited articles -->
+  </ul>
 
 <form action="/sessions" method="POST">
   <input type="hidden" name="_method" value="delete">
@@ -13,7 +23,7 @@
 <% else %>
 
 <h1>Welcome to Henrietta's Secret Sauce.</h1>
-<h2>You must <b>log in<b> to enter.</h2>
+<h2>You must <b>log in</b> to enter.</h2>
 
 <form action="/sessions" method="POST">
   <label for="username">Username:</label>

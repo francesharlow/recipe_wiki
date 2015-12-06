@@ -1,3 +1,3 @@
-class Category 
-  belongs_to_and_has_many :
+class Category < ActiveRecord::Base
+  has_and_belongs_to_many :articles
 end

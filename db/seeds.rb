@@ -41,4 +41,10 @@ edits = [
 
 Edit.create(edits)
 
+categories = [
+  {name: "breakfast"},
+  {name: "vegan"}
+]
+
+Category.create(categories)
 
