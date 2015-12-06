@@ -40,7 +40,7 @@ Should be legible and labeled informatively. These should illustrate the differe
 Whiteboard photos are good. Also consider using Draw.io or ASCII Flow to create your wireframes!<br>
 ![alt text](https://github.com/francesharlow/recipe_wiki/blob/master/img/splash.png "splash")
 ![alt text](https://github.com/francesharlow/recipe_wiki/blob/master/img/home.png "home")
-![alt text](https://github.com/francesharlow/recipe_wiki/blob/master/img/user.png "user")
+![alt text](https://github.com/francesharlow/recipe_wiki/blob/master/img/article.png "article")
 ###ERD/Data Models (3 Points)
 Should be diagrammed correctly, showing relevant attributes and associations, and should correspond to your application's models & database schema.<br>
 
