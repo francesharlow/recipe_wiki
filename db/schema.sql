@@ -27,6 +27,7 @@ CREATE TABLE edits (
   edited_at DATETIME
 );
 
--- CREATE TABLE categories (
-
--- );
+CREATE TABLE categories (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR,
+);

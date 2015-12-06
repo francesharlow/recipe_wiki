@@ -60,7 +60,9 @@ module App
       @article = Article.create(
         title: params[:title], 
         ingredients: params[:ingredients], 
-        directions: params[:directions], 
+        # code below adapted from http://aspiringwebdev.com/markdown-in-rails-with-redcarpet/
+        # directions: Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(params[:directions]).html_safe, 
+        directions: params[:directions],
         img_url: params[:img_url],
         created_on: DateTime.now,
         author_id: session[:user_id]
@@ -76,6 +78,7 @@ module App
 
     get "/articles/:id" do
       redirect to "/" if !session[:user_id]
+      # @article = Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(Article.find(params[:id])).html_safe
       @article = Article.find(params[:id])
       # code below from http://stackoverflow.com/questions/9780169/active-record-model-find-last
       @edit = Edit.where(article_id: params[:id]).order(:edited_at).last
@@ -84,6 +87,7 @@ module App
 
     get "/articles/:id/edit" do
       redirect to "/" if !session[:user_id]
+      # @article = Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(Article.find_by(params[:id])).html_safe
       @article = Article.find_by(params[:id])
       erb :edit_article
     end
@@ -93,6 +97,7 @@ module App
       article.update(
         title: params[:title], 
         ingredients: params[:ingredients],
+        # directions: Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(params[:directions]).html_safe,
         directions: params[:directions],
         img_url: params[:img_url]
         )
@@ -109,7 +114,6 @@ module App
       article.destroy
       redirect to "/articles"
     end
-
 
   end
 end

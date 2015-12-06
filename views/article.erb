@@ -1,5 +1,5 @@
 <h1><%= @article.title %></h1>
-<img src="<%= @article.img_url %>">
+<img id="article-img" src="<%= @article.img_url %>">
 <h2>Created by <%= @article.author.username %> on <%= @article.created_on %></h2>
 <% if @edit %>
 <h2>Last edited by <%= @edit.editor.username %> at <%= @edit.edited_at %><h2>
