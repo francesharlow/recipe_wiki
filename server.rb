@@ -82,6 +82,8 @@ module App
       @article = Article.find(params[:id])
       # code below from http://stackoverflow.com/questions/9780169/active-record-model-find-last
       @edit = Edit.where(article_id: params[:id]).order(:edited_at).last
+      # @categories = Category.where(article_id: params[:id])
+      @categories = @article.categories
       erb :article
     end
 
@@ -123,8 +125,8 @@ module App
 
     get "/categories/:id" do
      redirect to "/" if !session[:user_id]
-     @category = Category.where(id: params[:id])
- 
+     @category = Category.find(params[:id])
+     @articles = @category.articles
      erb :category
     end
 

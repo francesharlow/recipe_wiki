@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS articles;
 DROP TABLE IF EXISTS edits;
 DROP TABLE IF EXISTS categories;
+DROP TABLE IF EXISTS articles_categories;
 
 CREATE TABLE users (
   id INTEGER PRIMARY KEY,
@@ -22,6 +23,7 @@ CREATE TABLE articles (
 );
 
 CREATE TABLE edits (
+  id INTEGER PRIMARY KEY,
   article_id INTEGER,
   editor_id INTEGER,
   edited_at DATETIME
@@ -29,5 +31,10 @@ CREATE TABLE edits (
 
 CREATE TABLE categories (
   id INTEGER PRIMARY KEY,
-  name VARCHAR,
+  name VARCHAR
+);
+
+CREATE TABLE articles_categories (
+  article_id INTEGER,
+  category_id INTEGER
 );

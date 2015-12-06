@@ -12,8 +12,17 @@
   </ul>
 <h3>Directions:</h3>
 <p><%= @article.directions %></p>
+
+<form action="/articles/<%= @article.id %>/edit">
+    <input type="submit" value="Edit">
+</form>
+
+<form action="/articles/:id">
+    <input type="submit" value="Delete">
+</form>
+
 <h4>Tags:</h4>
-<% if @cateorgies %>
+<% if @categories %>
 <ul>
   <% @categories.each do |category| %>
     <li><a href="/categories/<%= category.id %>"><%= category.name %></a></li>
@@ -23,12 +32,8 @@
 <h4>None</h4>
 <% end %>
 
-<form action="/articles/<%= @article.id %>/edit">
-    <input type="submit" value="Edit">
-</form>
-
-<form action="/articles/:id">
-    <input type="submit" value="Delete">
+<form action="/articles/<%= @article.id %>/cat">
+  <input type="submit" value="Edit Tags">
 </form>
 
 <a href="/articles">All Recipes</a>

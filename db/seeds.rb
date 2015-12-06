@@ -30,6 +30,24 @@ articles = [
 
 Article.create(articles)
 
+# a1 = Article.create(
+#   title: "Hard Boiled Eggs",
+#   ingredients: "water, eggs, salt (optional)",
+#   directions: "1. Place egg in pot 3/4 full of water. (Salt water if desired.) <br>2. Bring water to a boil, then lower to a simmer and set timer for 10 minutes. <br>3. Remove from heat. Let cool.",
+#   img_url: "/img/egg.jpg",
+#   created_on: DateTime.new(2015,12,01,8,37),
+#   author_id: 1
+# )
+
+# a2 = Article.create(
+#   title: "Homemade Bread",
+#   ingredients: "water, flour, yeast, salt (optional)",
+#   directions: "1. Combine ingredient in a large bowl, let sit overnight. <br>2. Preheat oven to 400 degrees. Place dough in large, oven-proof pan. <br>3. Bake for 1 hour.",
+#   img_url: "/img/bread.jpg",
+#   created_on: DateTime.new(2015,12,01,8,50),
+#   author_id: 2
+# )
+
 edits = [
   {article_id: 1, 
     editor_id: 2, 
@@ -42,9 +60,20 @@ edits = [
 Edit.create(edits)
 
 categories = [
-  {name: "breakfast"},
+  {name: "breakfast"}, 
   {name: "vegan"}
 ]
 
 Category.create(categories)
+
+articles_categories = [
+  {article_id: 1,
+    category_id: 1},
+  {article_id: 2,
+    category_id: 1},
+  {article_id: 2,
+    category_id: 2}
+]
+
+ArticlesCategory.create(articles_categories)
 

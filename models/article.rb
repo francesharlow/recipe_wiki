@@ -1,7 +1,8 @@
 class Article < ActiveRecord::Base
   belongs_to :author, class_name: "User"
   has_many :edits, class_name: "Edit", foreign_key: "article_id"
-  has_and_belongs_to_many :categories
+  has_many :articles_categories
+  has_many :categories, through: :articles_categories
 
   # class method adapted from http://vaidehijoshi.github.io/blog/2015/08/11/rolling-out-the-redcarpet-for-rendering-markdown/
   # def self.markdown do
