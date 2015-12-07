@@ -1,6 +1,7 @@
 # recipe_wiki
 
 ## App Description (1 Point)
+Henrietta's Secret Sauce is a web application designed to disseminate Henrietta's recipes to her employees at various locations so they can recreate her work on their own.
 
 ##Link to GitHub Page (1 Point)
 
@@ -33,7 +34,7 @@ Should be detailed and specific; differentiate between MVP features and secondar
 7. Henrietta wants users to be able to add a category to an article so that articles can be organized.<br>
 
 #### User Stories:
-Henrietta is a restauranteur whose franchsie is growing rapidly. She wants her employees to be able to learn from her top-secret recipes, as well as share their own, no matter where they're located. So users need to be able to log in with password authenication and then create new articles. Each article will display which user created it, and when it was last edited, by whom. 
+Henrietta is a restauranteur whose franchise is growing rapidly. She wants her employees to be able to learn from her top-secret recipes, as well as share their own, no matter where they're located. So users need to be able to log in with password authenication and then create new articles. Each article will display which user created it, and when it was last edited, by whom. 
 
 ###Front-end Wireframes (3 Points)
 Should be legible and labeled informatively. These should illustrate the different possible flows of a user through your application's pages.<br>
