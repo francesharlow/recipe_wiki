@@ -14,8 +14,7 @@ class CreateArticleCategories < ActiveRecord::Migration
   end
 end
 
-# puts ARGV
-
-CreateArticleCategories.migrate(ARGV[0])
+CreateArticleCategories.migrate(:up)
+# CreateArticleCategories.migrate(ARGV[0])
 
 

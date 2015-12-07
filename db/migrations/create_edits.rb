@@ -15,5 +15,5 @@ class CreateEdits < ActiveRecord::Migration
 end
 
 CreateEdits.migrate(:up)
-CreateEdits.migrate(ARGV[0])
+# CreateEdits.migrate(ARGV[0])
 
