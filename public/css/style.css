@@ -3,10 +3,6 @@ body {
   background-color: honeydew;
 }
 
-/*.wrapper {
-  position: absolute;
-}*/
-
 .cover {
   position: fixed;
   top: -50%;
@@ -31,25 +27,46 @@ body {
   background-color: rgba(255,255,255,0.5)
 }
 
-.login form input {
+.login form {
   margin: 12px;
   font-size: 18px;
   border: black;
 }
 
-.login form label{
-  margin: 12px;
-  font-size: 18px;
-}
-
 .login button {
-  font-size: 24px;
+  font-size: 12px;
+  margin-top: 18px;
   margin-bottom: 18px;
 }
 
 h1 {
-  padding: 16px;
   font-size: 48px;
+}
+
+ul {
+  list-style: none;
+}
+
+.avatar {
+  margin: 20px;
+  position: relative;
+  max-height: 200px;
+/*  display: inline;*/
+  border-radius: 8px;
+}
+
+.footer {
+  background-color: honeydew;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 24px;
+  font-style: bold;
+}
+
+.footer li {
+  display: inline;
+
 }
 
 .home {
@@ -58,41 +75,68 @@ h1 {
   width: 70%;
 }
 
-.home ul {
+p {
+  text-align: center;
+}
+
+ul {
   list-style: none;
   text-align: center;
   font-size: 24px;
 }
 
-.home li {
-  display: inline;
-}
-
-.avatar {
-  position: relative;
-  height: 200px;
-  margin: 20px;
+li {
   display: inline;
 }
 
 .profile {
-  position: relative;
-  width: 80%;
+  background-color: white;
+  min-height: 300px;
+  font-size: 24px;
 }
 
-.contributions {
+.col {
+  float: left;
   width: 33%;
-  position: relative;
-  left: 250px;
 }
 
-.edits {
-  width: 33%;
-  position: relative;
-  left: 500px;
+.profile ul li {
+  font-size: 12px;
+  display: block;
 }
-
 
 h3 {
   font-size: 18px;
+}
+
+.index ul li {
+  font-size: 18px;
+  display: block;
+  text-align: left;
+}
+
+.med {
+  max-width: 100px;
+  max-height: 100px;
+  display: block;
+}
+
+#article-img {
+  max-width: 400px;
+  max-height: 400px;
+  display: inline;
+  position: relative;
+  float: left;
+  margin-right: 12px;
+}
+
+.credits p h3 {
+  display: block;
+  text-align: left;
+}
+
+.thumbnail {
+  max-height: 100px;
+  max-width: 100px;
+  display: block;
 }

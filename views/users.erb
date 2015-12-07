@@ -1,9 +1,17 @@
-<h1>Chefs</h1>
-<ul>
-<% @users.each do |user| %>
-  <li>
-    <a href="users/<%= user.id %>"><%= user.username %></a>
-  </li>
-<% end %>
-<ul>
-<a href="/">Home</a>
+<div class="index">
+  <h1>Chefs</h1>
+  <ul>
+  <% @users.each do |user| %>
+    <li>
+      <img class="thumbnail" src="<%= user.avatar_img_url %>">
+      <a href="users/<%= user.id %>"><%= user.username %></a>
+    </li>
+  <% end %>
+  </ul>
+</div>
+<div class="footer">
+  <a href="/">Home</a>
+  <a href="/articles">Recipes</a>
+  <a href="/categories">Tags</a>
+</div>
+

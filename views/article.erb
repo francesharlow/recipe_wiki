@@ -1,26 +1,29 @@
 <h1><%= @article.title %></h1>
-<img id="article-img" src="<%= @article.img_url %>">
-<h2>Created by <%= @article.author.username %> on <%= @article.created_on %></h2>
-<% if @edit %>
-<h2>Last edited by <%= @edit.editor.username %> at <%= @edit.edited_at %><h2>
-<% else %>
-<h2>This article has not been edited yet.</h2>
-<% end %>
-<h3>Ingredients:</h3>
-  <ul>
-    <li><%= @article.ingredients %></li>
-  </ul>
-<h3>Directions:</h3>
-<p><%= @article.directions %></p>
+<div class="content">
+  <img id="article-img" src="<%= @article.img_url %>">
+  <h3>Ingredients:</h3>
+    <ul>
+      <li><%= @article.ingredients %></li>
+    </ul>
+  <h3>Directions:</h3>
+  <p><%= @article.directions %></p>
 
-<form action="/articles/<%= @article.id %>/edit">
-    <input type="submit" value="Edit">
-</form>
+  <form action="/articles/<%= @article.id %>/edit">
+      <input type="submit" value="Edit">
+  </form>
 
-<form action="/articles/:id">
-    <input type="submit" value="Delete">
-</form>
-
+  <form action="/articles/:id">
+      <input type="submit" value="Delete">
+  </form>
+</div>
+<div class="credits">
+  <h3>Created by <%= @article.author.username %> on <%= @article.created_on %></h3>
+  <% if @edit %>
+  <h3>Last edited by <%= @edit.editor.username %> at <%= @edit.edited_at %></h3>
+  <% else %>
+  <h3>This article has not been edited yet.</h3>
+  <% end %>
+</div>
 <h4>Tags:</h4>
 <% if @categories %>
 <ul>

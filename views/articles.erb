@@ -1,9 +1,16 @@
-<h1>Recipes</h1>
-<ul>
-<% @articles.each do |article| %>
-  <li><a href="/articles/<%= article.id %>"><%= article.title %></a>
- <% end %>
- <li><a href="/articles/new">Create New Recipe</a></li>
-</li>
-</ul>
-<a href="/">Home</a>
+<div class="index">
+  <h1>Recipes</h1>
+  <ul>
+    <% @articles.each do |article| %>
+      <li>
+      <img class="thumbnail" src="<%= article.img_url %>"
+      <a href="/articles/<%= article.id %>"><%= article.title %></a>
+      </li>
+       <% end %>
+      <li><a href="/articles/new">Create New Recipe</a></li>
+    </li>
+  </ul>
+</div>
+<div class="footer">
+  <a href="/">Home</a>
+</div>
