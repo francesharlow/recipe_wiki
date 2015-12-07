@@ -6,7 +6,11 @@ module App
 
     get "/" do
       @user = User.find(session[:user_id]) if session[:user_id]
-      erb :index     
+      @user_articles = Article.where(author_id: session[:user_id])
+      @new_article_one = Article.all.order(:created_on).reverse_order.first
+      @new_article_two = Article.all.order(:created_on).reverse_order.second
+      @new_article_three = Article.all.order(:created_on).reverse_order.third
+      erb :index
     end
 
     post "/sessions" do
@@ -48,6 +52,7 @@ module App
     get "/users/:id" do
       redirect to "/" if !session[:user_id]
       @user = User.find(params[:id])
+      @user_articles = Article.where(author_id: params[:id])
       erb :user
     end
 
@@ -82,7 +87,6 @@ module App
       @article = Article.find(params[:id])
       # code below from http://stackoverflow.com/questions/9780169/active-record-model-find-last
       @edit = Edit.where(article_id: params[:id]).order(:edited_at).last
-      # @categories = Category.where(article_id: params[:id])
       @categories = @article.categories
       erb :article
     end
@@ -128,6 +132,25 @@ module App
      @category = Category.find(params[:id])
      @articles = @category.articles
      erb :category
+    end
+
+    get "/articles/:id/categories/new" do
+      redirect to "/" if !session[:user_id]
+      @article = Article.find(params[:id])
+      erb :new_category
+    end
+
+    post "/articles/:id/categories" do
+      redirect to "/" if !session[:user_id]
+      @article = Article.find(params[:id])
+      @category = Category.create(
+        name: params[:name]
+        )
+      # @articles_categories = ArticlesCategory.create (
+      #   article_id: params[:id],
+      #   category_id: @category.id,
+      #   )
+      redirect to "/articles/#{@article.id}"
     end
 
   end

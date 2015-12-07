@@ -32,8 +32,6 @@
 <h4>None</h4>
 <% end %>
 
-<form action="/articles/<%= @article.id %>/cat">
-  <input type="submit" value="Edit Tags">
-</form>
+<a href="/articles/<%= @article.id %>/categories/new">Add Tag</a>
 
 <a href="/articles">All Recipes</a>

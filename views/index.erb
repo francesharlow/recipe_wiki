@@ -9,13 +9,17 @@
       <div class="contributions">
       <h3>Your contributions</h3>
         <ul>
-        <!-- insert link list of recipes authored by @user -->
+          <% @user_articles.each do |article| %>
+            <li><a href="/articles/<%= article.id %>"><%= article.title %></a>
+          <% end %>
         </ul>
       </div>
       <div class="edits">
         <h3>Recent updates</h3>
         <ul>
-        <!-- insert link list of recently edited articles -->
+          <li><a href="/articles/<%= @new_article_one.id %>"><%= @new_article_one.title %></a></li>
+          <li><a href="/articles/<%= @new_article_two.id %>"><%= @new_article_two.title %></a></li>
+          <li><a href="/articles/<%= @new_article_three.id %>"><%= @new_article_three.title %></a></li>
         </ul>
       </div>
     </div>
