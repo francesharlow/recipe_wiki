@@ -8,7 +8,7 @@ class CreateArticles < ActiveRecord::Migration
       t.string(:directions)
       t.string(:img_url)
       t.datetime(:created_on)
-      t.integer(:author_id)
+      t.references(:author)
     end
   end
 
