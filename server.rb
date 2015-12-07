@@ -4,7 +4,7 @@ module App
     set :method_override, true
     enable :sessions
 
-    # $markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
+    $markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
 
     get "/" do
       @user = User.find(session[:user_id]) if session[:user_id]
@@ -144,10 +144,10 @@ module App
       @category = Category.create(
         name: params[:name]
         )
-      # @articles_categories = ArticlesCategory.create (
-      #   article_id: params[:id],
-      #   category_id: @category.id,
-      #   )
+      @articles_categories = ArticlesCategory.create (
+        article_id: params[:id],
+        category_id: @category.id,
+        )
       redirect to "/articles/#{@article.id}"
     end
 

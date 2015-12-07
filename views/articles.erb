@@ -3,7 +3,7 @@
   <ul>
     <% @articles.each do |article| %>
       <li>
-      <img class="thumbnail" src="<%= article.img_url %>"
+      <img class="thumbnail" src="<%= article.img_url %>">
       <a href="/articles/<%= article.id %>"><%= article.title %></a>
       </li>
        <% end %>
@@ -13,4 +13,6 @@
 </div>
 <div class="footer">
   <a href="/">Home</a>
+  <a href="/users">Chefs</a>
+  <a href="/categories">Tags</a>
 </div>

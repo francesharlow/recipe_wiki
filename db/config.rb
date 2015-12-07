@@ -1,4 +1,5 @@
 require "active_record"
+require "redcarpet"
 
 # ActiveRecord::Base.logger = Logger.new(STDERR)
 
