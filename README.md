@@ -1,7 +1,7 @@
 # recipe_wiki
 
 ## App Description (1 Point)
-Henrietta's secret sauce is a web application designed to disseminate Henrietta's recipes to her employees at various locations so they can recreate her work on their own.
+Henrietta's Secret Sauce is a web application designed to disseminate Henrietta's recipes to her employees at various locations so they can recreate her work on their own.
 
 ##Link to GitHub Page (1 Point)
 
