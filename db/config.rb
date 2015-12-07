@@ -2,8 +2,6 @@ require "active_record"
 
 # ActiveRecord::Base.logger = Logger.new(STDERR)
 
-
-
 if ENV['RACK_ENV'] == "production"
     require 'uri'
     db = URI.parse(ENV['DATABASE_URL'])
