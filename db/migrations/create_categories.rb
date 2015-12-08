@@ -7,11 +7,10 @@ class CreateCategories < ActiveRecord::Migration
     end
   end
 
-    def down
-      drop table :categories
-    end
-
+  def down
+    drop table :categories
   end
+
 end
 
 CreateCategories.migrate(ARGV[0])
