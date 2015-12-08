@@ -1,6 +1,7 @@
 require_relative "../config"
 
 class CreateArticleCategories < ActiveRecord::Migration
+  
   def up
     create_table :articles_categories, id: false do |t|
       t.references(:article)
@@ -8,9 +9,9 @@ class CreateArticleCategories < ActiveRecord::Migration
     end
   end
 
-    def down
-      drop table :articles_categories
-    end
+  def down
+    drop table :articles_categories
+  end
 
 end
 
