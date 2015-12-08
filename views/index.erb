@@ -11,7 +11,9 @@
       <ul>
         <h3>Your contributions</h3>
           <% @user_articles.each do |article| %>
-            <li><a href="/articles/<%= article.id %>"><%= article.title %></a>
+            <% if article %>
+              <li><a href="/articles/<%= article.id %>"><%= article.title %></a>
+            <% end %>
         <% end %>
       </ul>
     </div>
