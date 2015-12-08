@@ -20,9 +20,15 @@
     <div class="col">
         <ul>
           <h3>Recent updates</h3>
+          <% if @new_article_one %>
           <li><a href="/articles/<%= @new_article_one.id %>"><%= @new_article_one.title %></a></li>
+          <% end %>
+          <% if @new_article_two %>
           <li><a href="/articles/<%= @new_article_two.id %>"><%= @new_article_two.title %></a></li>
+          <% end %>
+          <% if @new_article_three %>
           <li><a href="/articles/<%= @new_article_three.id %>"><%= @new_article_three.title %></a></li>
+          <% end %>
         </ul>
       </div>
     </div>
