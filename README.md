@@ -3,7 +3,8 @@
 ## App Description (1 Point)
 Henrietta's Secret Sauce is a web application designed to disseminate Henrietta's recipes to her employees at various locations so they can recreate her work on their own.
 
-##Link to GitHub Page (1 Point)
+##Link to App (1 Point)
+https://enigmatic-beach-9249.herokuapp.com/
 
 ##List of Technologies (1 Point)
 1. HTML<br>
@@ -21,9 +22,9 @@ Secondary requirements include comments, printer-friendly view, and search funct
 
 ###Front-end Wireframes (3 Points)
 Below is a mock-up of the splash page, before signing up or logging in. 
-![alt text](https://github.com/francesharlow/recipe_wiki/blob/master/img/splash.png "splash")
+![alt text](https://github.com/francesharlow/recipe_wiki/blob/master/img/splash.png "splash")<br>
 This is the index once a user has logged in. It will display recently created recipes, as well as the user's own recipes.
-![alt text](https://github.com/francesharlow/recipe_wiki/blob/master/img/home.png "home")
+![alt text](https://github.com/francesharlow/recipe_wiki/blob/master/img/home.png "home")<br>
 A typical recipe page will include at least one photo, the author's name, ingredients, directions, tags, and the most recent edit.
 ![alt text](https://github.com/francesharlow/recipe_wiki/blob/master/img/article.png "article")
 
