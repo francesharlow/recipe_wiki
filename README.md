@@ -29,7 +29,7 @@ A typical recipe page will include at least one photo, the author's name, ingred
 ![alt text](https://github.com/francesharlow/recipe_wiki/blob/master/img/article.png "article")
 
 ###ERD/Data Models (3 Points)
-![alt text](https://github.com/francesharlow/recipe_wiki/blob/master/img/erd.png "erd")
+![alt text](https://github.com/francesharlow/recipe_wiki/blob/master/img/ERD.png "erd")
 
 
 
