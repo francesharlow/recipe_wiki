@@ -6,6 +6,7 @@ class CreateArticleCategories < ActiveRecord::Migration
       t.references(:article)
       t.references(:category)
     end
+  end
 
     def down
       drop table :articles_categories
