@@ -2,7 +2,9 @@
 <h1><%= @article.title %></h1>
   <div class="content">
     <div class="col-1-3">
-      <img id="article-img" src="<%= @article.img_url %>" alt="photo">
+      <div class="modal">
+        <img id="article-img" class="avatarModal" src="<%= @article.img_url %>" alt="photo">
+      </div>
       <div class="actions">
         <form action="/articles/<%= @article.id %>/edit">
           <input type="submit" value="Edit">
@@ -16,7 +18,7 @@
         <% if @edit %>
         <p>Last edited by <%= @edit.editor.username %> at <%= @edit.edited_at %></p>
         <% else %>
-        <h3>This article has not been edited yet.</h3>
+        <p>This article has not been edited yet.</p>
         <% end %>
       </div>
       <div class="tags">
