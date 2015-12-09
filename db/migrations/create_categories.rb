@@ -1,7 +1,6 @@
 require_relative "../config"
 
 class CreateCategories < ActiveRecord::Migration
-  
   def up
     create_table :categories do |t|
       t.string(:name)
@@ -9,7 +8,7 @@ class CreateCategories < ActiveRecord::Migration
   end
 
   def down
-    drop table :categories
+    drop_table :categories
   end
 
 end

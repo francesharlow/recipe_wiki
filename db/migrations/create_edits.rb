@@ -12,6 +12,7 @@ class CreateEdits < ActiveRecord::Migration
   def down
     drop_table :edits
   end
+  
 end
 
 CreateEdits.migrate(ARGV[0])
