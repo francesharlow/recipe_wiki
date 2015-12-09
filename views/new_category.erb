@@ -1,7 +1,13 @@
-<h1>New Category</h1>
+<h1>New Tag</h1>
 
 <form action="/articles/<%= @article.id %>/categories" method="POST">
   <label for="name">Name:</label>
   <input type="name" name="name" id="name">
   <button>Create Tag</button>
 </form>
+<div class="footer">
+  <a href="/">Home</a>
+  <a href="/articles">Recipes</a>
+  <a href="/users">Chefs</a>
+  <a href="/categories">All Tags</a>
+</div>

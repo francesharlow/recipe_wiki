@@ -1,12 +1,20 @@
-<h1>Recipes tagged with <%= @category.name %> </h1>
-<ul>
+<h1 class="header">Recipes tagged with <br> <%= @category.name %> </h1>
+<div class="index">
+  <ul>
 
-<% if @articles %>
-<ul>
-  <% @articles.each do | article | %>
-    <li><a href="/articles/<%= article.id %>"><%= article.title %></a></li>
+  <% if @articles %>
+  <ul>
+    <% @articles.each do | article | %>
+      <li><a href="/articles/<%= article.id %>"><%= article.title %></a></li>
+    <% end %>
+  </ul>
+  <% else %>
+  <h1>None</h1>
   <% end %>
-</ul>
-<% else %>
-<h1>None</h1>
-<% end %>
+</div>
+  <div class="footer">
+    <a href="/">Home</a>
+    <a href="/users">Chefs</a>
+    <a href="/articles">Recipes</a>
+    <a href="/categories">All Tags</a>
+  </div>

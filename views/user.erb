@@ -1,12 +1,21 @@
 <div class="user">
-  <h1><%= @user.username %></h1>
-  <img src="<%= @user.avatar_img_url %>" alt="avatar">
-  <p>Location: <%= @user.location %></p>
-  <p>Recipes:</p>
-  <ul>
-    <% @user_articles.each do |article| %>
-    <li><a href="articles/<%= article.id %>"> <%= article.title %> </a></li>
-    <% end %>
-  </ul>
+  <h1 class="header"><%= @user.username %></h1>
+  <div class="col-1-3">
+    <img src="<%= @user.avatar_img_url %>" alt="avatar">
+  </div>
+  <div class="col-2-3">
+    <p>Location: <%= @user.location %></p>
+    <p>Recipes:</p>
+    <ul>
+      <% @user_articles.each do |article| %>
+      <li><a href="../articles/<%= article.id %>"> <%= article.title %> </a></li>
+      <% end %>
+    </ul>
+  </div>
+</div> 
+<div class="footer">
+    <a href="/">Home</a>
+    <a href="/articles">Recipes</a>
+    <a href="/users">All Chefs</a>
+    <a href="/categories">Tags</a>
 </div>
-<a href="/users">Back to all Chefs</a>

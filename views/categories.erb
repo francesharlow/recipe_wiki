@@ -1,9 +1,17 @@
-<h1>Tags</h1>
-<ul>
-<% @categories.each do |category| %>
-  <li>
-    <a href="categories/<%= category.id %>"><%= category.name %></a>
-  </li>
-<% end %>
-<ul>
-<a href="/">Home</a>
+<div class="header">
+  <h1>Tags</h1>
+</div>
+<div class="index">
+  <ul>
+  <% @categories.each do |category| %>
+    <li>
+      <a href="categories/<%= category.id %>"><%= category.name %></a>
+    </li>
+  <% end %>
+  </ul>
+</div>
+<div class="footer">
+  <a href="/">Home</a>
+  <a href="/users">Chefs</a>
+  <a href="/articles">Recipes</a>
+</div>

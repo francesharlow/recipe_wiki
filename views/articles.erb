@@ -1,5 +1,8 @@
+<div class="header">
+  <h1 class="header">Recipes</h1>
+  <a href="/articles/new">Create New Recipe</a>
+</div>
 <div class="index">
-  <h1>Recipes</h1>
   <ul>
     <% @articles.each do |article| %>
       <li>
@@ -7,8 +10,6 @@
       <a href="/articles/<%= article.id %>"><%= article.title %></a>
       </li>
        <% end %>
-      <li><a href="/articles/new">Create New Recipe</a></li>
-    </li>
   </ul>
 </div>
 <div class="footer">
